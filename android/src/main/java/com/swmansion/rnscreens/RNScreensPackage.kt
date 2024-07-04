@@ -25,9 +25,9 @@ class RNScreensPackage : TurboReactPackage() {
         // installing its C++ bindings - so we are safe in terms of creating this helper
         // before RN starts creating shadow nodes.
         // See https://github.com/software-mansion/react-native-screens/pull/2169
-        if (BuildConfig.IS_NEW_ARCHITECTURE_ENABLED) {
-            screenDummyLayoutHelper = ScreenDummyLayoutHelper(reactContext)
-        }
+        //if (BuildConfig.IS_NEW_ARCHITECTURE_ENABLED) {
+            //screenDummyLayoutHelper = ScreenDummyLayoutHelper(reactContext)
+        //}
 
         return listOf<ViewManager<*, *>>(
             ScreenContainerViewManager(),
@@ -53,7 +53,7 @@ class RNScreensPackage : TurboReactPackage() {
     override fun getReactModuleInfoProvider(): ReactModuleInfoProvider =
         ReactModuleInfoProvider {
             val moduleInfos: MutableMap<String, ReactModuleInfo> = HashMap()
-            val isTurboModule = BuildConfig.IS_NEW_ARCHITECTURE_ENABLED
+            val isTurboModule = false
             moduleInfos[ScreensModule.NAME] =
                 ReactModuleInfo(
                     ScreensModule.NAME,

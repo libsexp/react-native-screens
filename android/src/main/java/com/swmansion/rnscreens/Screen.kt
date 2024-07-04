@@ -76,11 +76,13 @@ class Screen(
             val headerHeight = calculateHeaderHeight()
             val totalHeight =
                 headerHeight.first + headerHeight.second // action bar height + status bar height
-            if (BuildConfig.IS_NEW_ARCHITECTURE_ENABLED) {
+            /**if (BuildConfig.IS_NEW_ARCHITECTURE_ENABLED) {
                 updateScreenSizeFabric(width, height, totalHeight)
             } else {
                 updateScreenSizePaper(width, height)
-            }
+            }**/
+
+            updateScreenSizePaper(width, height)
 
             notifyHeaderHeightChange(totalHeight)
         }

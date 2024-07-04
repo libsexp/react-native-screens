@@ -47,10 +47,10 @@ open class ScreenViewManager :
         props: ReactStylesDiffMap?,
         stateWrapper: StateWrapper?,
     ): Any? {
-        if (BuildConfig.IS_NEW_ARCHITECTURE_ENABLED) {
+        /**if (BuildConfig.IS_NEW_ARCHITECTURE_ENABLED) {
             // fabricViewStateManager should never be null in Fabric. The null check is only for Paper's empty impl.
             view.fabricViewStateManager?.setStateWrapper(stateWrapper)
-        }
+        }**/
         return super.updateState(view, props, stateWrapper)
     }
 
